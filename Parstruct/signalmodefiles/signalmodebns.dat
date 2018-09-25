@@ -1,0 +1,13 @@
+################
+#SIGNAL CHANNEL#
+################
+
+#Scattering Parameters
+#Choose from NCE_nucleon, NCE_electron, Pion_Inelastic, Inelastic_Delta_to_Gam\
+ma or NCE_nucleon_baryonic.
+signal_channel NCE_nucleon_baryonic
+#scatter_dist_filename Source/data/DIS.dat
+
+#Add this line to use coherent scattering rather than incoherent scattering.
+#coherent true
+#timing_cut 1e-6

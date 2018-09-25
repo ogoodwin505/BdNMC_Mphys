@@ -1,0 +1,24 @@
+
+
+
+################################
+#Production Channel Definitions#
+################################
+
+production_channel pi0_decay_baryonic
+#production_distribution pi0_sandfordwang
+meson_per_pi0 1.0
+production_channel eta_decay_baryonic
+#production_distribution pi0_sandfordwang
+meson_per_pi0 0.0333333333333
+production_channel V_decay_baryonic
+production_distribution proton_brem
+zmax 0.7
+zmin 0.3
+ptmax 0.2
+
+############################
+#END OF PRODUCTION CHANNELS#
+############################
+
+

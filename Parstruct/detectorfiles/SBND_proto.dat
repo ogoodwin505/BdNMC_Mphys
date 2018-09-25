@@ -1,0 +1,26 @@
+######################
+#DETECTOR DECLARATION#
+######################
+
+#Detector Parameters
+detector cuboid
+x-position 0.0
+y-position 0.0
+z-position 100
+width 2.6
+length 10.4
+height 2.3
+det-theta 0
+det-phi 0
+det-psi 0
+
+#Material parameters
+#Mass is set in GeV.
+#mass is only important for coherent scattering, can be set to anything.
+#anything not defined will be set to zero.
+material Argon
+number_density 2.11e22
+proton_number 18
+neutron_number 22
+electron_number 18
+mass 37.471224

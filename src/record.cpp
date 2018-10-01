@@ -28,9 +28,9 @@ map<string,int> trans=
 // need function to convert from beam coordinates to SBND coords to use in larsoft
 double * ConvertToSBNDCoords(double *origin_coords,std::shared_ptr<detector> &det) {
   static double SBND_coords[3];
-  SBND_coords[0]=origin_coords[0]-det->GetDetCoordsComponent(0); // may change if detector is not centered on beam.
-  SBND_coords[1]=origin_coords[1]-det->GetDetCoordsComponent(1);
-  SBND_coords[2]=origin_coords[2]-(det->GetDetCoordsComponent(2))+2.5;
+  SBND_coords[0]=(origin_coords[0]-det->GetDetCoordsComponent(0))*100; // may change if detector is not centered on beam. //convert to cm
+  SBND_coords[1]=(origin_coords[1]-det->GetDetCoordsComponent(1))*100;
+  SBND_coords[2]=(origin_coords[2]-(det->GetDetCoordsComponent(2))+2.5)*100; //2.5 is det length over two will have to change this is decwidth changes
   
   return SBND_coords;
 }

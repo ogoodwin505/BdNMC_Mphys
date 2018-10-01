@@ -1,7 +1,7 @@
 # BdNMC
-This is a version of BdNMC edited to output in the .hepevt format
+This is a version of BdNMC edited to output in the .hepevt format specifically for the SBND experiment.
 
-Also added are example parameter files for the SBND and MicroBooNE experiments. 
+Also added are example parameter files for SBND. 
 
 
 "

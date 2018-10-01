@@ -27,6 +27,7 @@ void detector::add_material(double nd, double np, double nn, double ne, double m
 
 detector_sphere::detector_sphere (double x, double y, double z, double radius){
     r[0] = x; r[1] = y; r[2] = z; Rdet = radius;
+    FrontFaceOriginLoc[0]=x; FrontFaceOriginLoc[1]=y; FrontFaceOriginLoc[2]=z-radius;
 }
 
 // distance DM travels through detector
@@ -99,6 +100,7 @@ detector_cylinder::detector_cylinder (double x, double y, double z, double detle
     l[0] = detlength*cos(detPhi)*sin(detTheta)/2;
     l[1] = detlength*sin(detPhi)*sin(detTheta)/2;
     l[2] = detlength*cos(detTheta)/2;
+    FrontFaceOriginLoc[0]=x; FrontFaceOriginLoc[1]=y; FrontFaceOriginLoc[2]=z-(detlength/2);
 
 }
 
@@ -217,6 +219,7 @@ void XYX_rotate(const double t1, const double t2, const double t3, double *arr){
 
 detector_cuboid::detector_cuboid(double x, double y, double z, double detwidth, double detheight, double detlength, double detPhi, double detTheta, double detPsi){
     r[0]=x; r[1]=y; r[2]=z;
+    FrontFaceOriginLoc[0]=x; FrontFaceOriginLoc[1]=y; FrontFaceOriginLoc[2]=z-(detlength/2); 
     //Length oriented along z-axis
     face[0][0]=detwidth/2.0;
     face[1][1]=detheight/2.0;
@@ -232,6 +235,8 @@ detector_cuboid::detector_cuboid(double x, double y, double z, double detwidth, 
         for(int j=0; j<3; j++)
             face[i+3][j]=-face[i][j];
     }
+
+    
    /*
     for(int i=0; i<6; i++){
       cout << face[i][0] << " " <<face[i][1] << " " <<face[i][2] << endl;

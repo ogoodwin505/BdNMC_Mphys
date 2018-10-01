@@ -5,7 +5,8 @@
 #include <list>
 
 #include "Particle.h"
+#include "detector.h"
 
-std::ostream& Record_Particles(std::ostream &, std::list<Particle> &);
+std::ostream& Record_Particles(std::ostream &, std::list<Particle> &,std::shared_ptr<detector> &);
 
 #endif

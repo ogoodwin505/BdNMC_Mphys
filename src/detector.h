@@ -37,6 +37,9 @@ public:
     double PNtot(){ return p_num_tot;}
     double NNtot(){ return n_num_tot;}
     double ENtot(){ return e_num_tot;}
+    double GetDetCoordsComponent(unsigned int index){return r[index];}
+    double FrontFaceOriginLoc[3];
+
     
     //double cross_point[2];//holds the last entrance and exit points of a particle.
 protected:
@@ -79,6 +82,7 @@ class detector_cuboid: public detector{
         detector_cuboid(double xdet, double ydet, double zdet, double detlength, double detwidth, double detheight, double detPhi, double detTheta ,double detPsi);
         ~detector_cuboid(){}
         double Ldet (Particle &);
+        double GetFrontCentreFaceCoords(unsigned int index){return face[0][index];}
     private:
         //double Hdetector, Wdetector, Ldetector;
         //These each point to the center of one of the cuboid's faces.

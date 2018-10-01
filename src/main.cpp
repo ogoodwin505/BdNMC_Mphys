@@ -768,7 +768,7 @@ int main(int argc, char* argv[]){
         }
 				if(scatter_switch&&outmode=="comprehensive"){
 				  *comprehensive_out << ++nevent <<" "<< vec.size() << endl;
-	                Record_Particles(*comprehensive_out, vec);
+	                Record_Particles(*comprehensive_out, vec,det);
 	               
 	            }
 		else if(scatter_switch)
